@@ -1,2 +1,2 @@
 # resolve-problems
-Resolve Problems is a repo to resolve some interesting problems found over the internet.
+_**Resolve Problems is a repo to resolve some interesting problems found over the internet.**_
