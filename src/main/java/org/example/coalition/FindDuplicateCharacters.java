@@ -1,9 +1,12 @@
 package org.example.coalition;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+@Slf4j
 public class FindDuplicateCharacters {
 
     public static void main(String[] args) {
@@ -28,10 +31,10 @@ public class FindDuplicateCharacters {
 
         // Iterate through HashMap to print all duplicate characters of String
         Set<Map.Entry<Character, Integer>> entrySet = charMap.entrySet();
-        System.out.printf("List of duplicate characters in String '%s' %n", word);
+        log.info("List of duplicate characters in String '%s' %n", word);
         for (Map.Entry<Character, Integer> entry : entrySet) {
             if (entry.getValue() > 1) {
-                System.out.printf("%s : %d %n", entry.getKey(), entry.getValue());
+                log.info("%s : %d %n", entry.getKey(), entry.getValue());
             }
         }
     }
