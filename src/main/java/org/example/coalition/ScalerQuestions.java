@@ -1,6 +1,8 @@
 package org.example.coalition;
 
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class ScalerQuestions {
     void function(){
         int i  =0 ;
@@ -10,17 +12,17 @@ public class ScalerQuestions {
             sum = i+ sum;
             i+= 1;
         }
-        System.out.println(sum);
+        log.info("{}",sum);
     }
 
     public static void main(String[] args) {
         ScalerQuestions scalerQuestions = new ScalerQuestions();
         scalerQuestions.function();
-        System.out.println(fun(100,2000));
-        System.out.println(scalerQuestions.fib(6));
+        log.info("{}",fun(100,2000));
+        log.info("{}",scalerQuestions.fib(6));
 
         for(int i =0; i< 6; i++){
-            System.out.print(printTribRec(i));
+            log.info("{}",printTribRec(i));
         }
 
     }
@@ -39,13 +41,11 @@ public class ScalerQuestions {
     }
 
     static int printTribRec(int n){
-        if(n==0 || n==1| n==2)
+        if(n==0 || n==1|| n==2)
             return 0;
         if(n==3)
             return 1;
         else
             return printTribRec(n-1) + printTribRec(n-2) + printTribRec(n-3);
     }
-
-
 }
