@@ -1,9 +1,11 @@
 package org.example.coalition;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-@Slf4j
 public class ScalerQuestions {
+
+    private Logger log = LoggerFactory.getLogger(ScalerQuestions.class);
     void function(){
         int i  =0 ;
         int sum =0;
@@ -18,11 +20,11 @@ public class ScalerQuestions {
     public static void main(String[] args) {
         ScalerQuestions scalerQuestions = new ScalerQuestions();
         scalerQuestions.function();
-        log.info("{}",fun(100,2000));
-        log.info("{}",scalerQuestions.fib(6));
+        System.out.println(fun(100,2000));
+        System.out.println(scalerQuestions.fib(6));
 
         for(int i =0; i< 6; i++){
-            log.info("{}",printTribRec(i));
+            System.out.println(printTribRec(i));
         }
 
     }
